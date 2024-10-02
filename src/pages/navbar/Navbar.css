@@ -1,0 +1,185 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.navbar-options {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.button-register,
+.button-signin,
+.button-bookmarks,
+.button-add-story {
+  padding: 0.6rem 1.8rem;
+  margin-right: 1rem;
+  border-radius: 25px;
+  border: none;
+  color: #ffffff;
+  background-color: #ff6b6b;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.button-register:hover,
+.button-signin:hover,
+.button-bookmarks:hover,
+.button-add-story:hover {
+  background-color: #e55c5c;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #f0f0f0;
+  margin-right: 1rem;
+}
+
+#p1 {
+  display: none;
+}
+
+.button-bookmarks a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.profile-dropdown .button-logout {
+  padding: 0.6rem 1.8rem;
+  margin-right: 1rem;
+  border-radius: 25px;
+  border: none;
+  color: #ffffff;
+  background-color: #ff6b6b;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout2 {
+  margin-left: 15px;
+}
+
+.username-box {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  display: none;
+  width: 220px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.username-box.show {
+  display: block;
+}
+
+#logoutHide {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-options {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 95%;
+    background-color: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+  }
+
+  .navbar-options.active {
+    display: flex;
+  }
+
+  .user-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: auto;
+    padding: 9px;
+  }
+
+  #p1 {
+    display: flex;
+    align-items: center;
+  }
+
+  #p2 {
+    display: none;
+  }
+
+  .profile-dropdown {
+    margin-top: auto;
+    display: block !important;
+  }
+
+  .username-box {
+    display: none !important;
+  }
+
+  .button-register,
+  .button-signin,
+  .button-bookmarks,
+  .button-add-story {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .menu-icon-cross.active {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right: 5px;
+  }
+
+  .menu-icon-cross {
+    display: none;
+  }
+}
+
+.menu-icon-cross {
+  display: none;
+}
+
+@media only screen and (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+}

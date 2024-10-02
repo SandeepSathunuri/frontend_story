@@ -1,0 +1,245 @@
+.story-modal-content {
+  background-color: #121212;
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  justify-content: space-between;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.story-modal-content:hover {
+  transform: scale(1.02);
+}
+
+.story-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.story-actions {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  padding: 15px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bookmark-btn,
+.download-btn,
+.like-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease, color 0.3s;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.bookmark-btn:hover,
+.download-btn:hover,
+.like-btn:hover {
+  color: #00bcd4;
+  transform: scale(1.1);
+  background-color: rgba(0, 188, 212, 0.2);
+}
+
+.like-count {
+  font-size: 1.2rem;
+  color: white;
+  margin-left: 10px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.story_close-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.story_close-btn:hover {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.story-slides {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #121212;
+}
+
+.story-slide-item img,
+.story-slide-item video {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.story-slide-item h2,
+.story-slide-item p {
+  color: white;
+  margin: 10px 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 90%;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.story-slide-item h2:hover,
+.story-slide-item p:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.05);
+}
+
+.slide-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slide-navigation button {
+  background: none;
+  border: none;
+  font-size: 2.4rem;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease, transform 0.2s;
+}
+
+.slide-navigation button:hover {
+  color: #00bcd4;
+  transform: scale(1.1);
+}
+
+.progress-indicator {
+  display: flex;
+  width: 90%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 15px;
+}
+
+.progress-bar {
+  background-color: #555;
+  width: 100%;
+  height: 6px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.progress-fill {
+  background-color: #4caf50;
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.2s ease-in-out;
+}
+
+.story-arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.4rem;
+  cursor: pointer;
+  outline: none;
+  opacity: 0.8;
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+.arrow:hover:not(:disabled) {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.arrow_left-arrow {
+  margin-left: 25vw;
+}
+
+.arrow_right-arrow {
+  margin-right: 25vw;
+}
+
+.arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.share-btn {
+  margin-left: 22vw;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.share-btn:hover {
+  color: #00bcd4;
+  background-color: rgba(0, 188, 212, 0.2);
+}
+
+.story-actions {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+}
+
+.like-btn {
+  display: flex;
+  align-items: center;
+}

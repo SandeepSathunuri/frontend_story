@@ -1,0 +1,161 @@
+.homepage {
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+}
+
+.categories {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.category-section {
+  margin-bottom: 40px;
+}
+
+.stories-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.category-card {
+  position: relative;
+  display: flex;
+  flex-direction: column; 
+  margin: 20px;
+  border: 2px solid transparent;
+  border-radius: 30px; 
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(12, 0, 0, 0.4);
+  height: 25vh;
+  width: 25vw;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; 
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.category-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  border-color: #6f47ff;
+  box-shadow: 0 10px 30px rgba(24, 11, 212, 0.4); 
+}
+
+.card-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.9;
+  z-index: 0;
+  border-radius: 30px; 
+}
+
+.category-card.active {
+  border-color: #6f47ff;
+  box-shadow: 0 6px 24px rgba(24, 11, 212, 0.9); 
+}
+
+.category-card h3 {
+  margin-top: 10px;
+  font-size: 28px; 
+  text-align: center;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12vw;
+}
+
+.story-card {
+  background-color: rgba(8, 8, 8, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+  height: 55vh;
+  width: 20vw;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.story-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.story-media {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.story-media:hover {
+  transform: scale(1.05);
+}
+
+.story-card h1 {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #f7f2f2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.story-card p {
+  font-size: 14px;
+  color: #fcf6f6;
+}
+
+.see-more-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FF6347;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.see-more-btn:hover {
+  background-color: #FF4500;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .categories {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll; 
+  }
+
+  .category-card {
+    height: 15vh !important;
+    width: 30vw !important;
+    margin: 5px;
+  }
+}
